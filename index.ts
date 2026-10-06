@@ -138,9 +138,11 @@ async function showDraftLoot(i:any, raffleId:string){
     new ButtonBuilder().setCustomId(`draft:qty:${raffleId}`).setLabel('Set Quantities').setEmoji('➕').setStyle(ButtonStyle.Secondary),
     new ButtonBuilder().setCustomId(`draft:start:${raffleId}`).setLabel('Start Raffle').setEmoji('🚀').setStyle(ButtonStyle.Success)
   );
-  await i.reply({content:'📦 **Build your raffle**
-Select or edit loot at any time before launch, set quantities with `+ / −`, then press **Start Raffle**.',components:[row1,row2],ephemeral:true});
-}
+  awawait i.reply({
+  content:'📦 **Build your raffle**\nSelect or edit loot at any time before launch, set quantities with `+ / −`, then press **Start Raffle**.',
+  components:[row1,row2],
+  ephemeral:true
+});
 
 async function startRaffle(raffleId:string, i:any){
   const r=await getRaffle(raffleId); const loot=await getRaffleLoot(raffleId);
