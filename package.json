@@ -1,20 +1,17 @@
 {
   "name": "vanguard-raffle-bot",
+  "version": "6.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "start": "tsx src/index.ts"
+    "start": "tsx index.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
     "discord.js": "^14.22.1",
+    "dotenv": "^17.2.2",
     "openai": "^5.23.2",
-    "dotenv": "^17.2.2"
-  },
-  "devDependencies": {
     "tsx": "^4.20.5",
-    "typescript": "^5.9.2",
-    "@types/node": "^24.5.2"
+    "typescript": "^5.9.2"
   }
 }
